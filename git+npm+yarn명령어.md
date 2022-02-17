@@ -1,7 +1,7 @@
 Git Program 설치
 Git 다운받아 설치한다.
 
-<<< Git 명령어 >>>
+## Git 명령어
 Help : git help config
 git 설정하기
 
@@ -132,7 +132,7 @@ Pull Request 보내기 : git request-pull origin/master issue
 =====================================
 
 
-<<< npm 명령어 >>>
+## npm 명령어
 npm을 사용하기 위해서는 몇가지 명령어를 알아둘 필요가 있는데, 프론트엔드 개발을 위해서 사용하는 npm 명령어는 대표적으로 아래와 같습니다.
 
 npm init : package.json 생성
@@ -149,7 +149,7 @@ npm dedupe : 중복 설치된 패키지들을 정리해주는 명령어입니다
 =====================================
 
 
-<<< yarn 명령어 >>>
+## yarn 명령어
 yarn init : package.json 생성
 yarn or yarn install : package.json 파일 및 해당 종속성에 나열된 모든 모듈을 설치
 yarn add package_name@버전 : 특정 패키지의 특정 버전 설치
