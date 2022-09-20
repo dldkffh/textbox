@@ -16,6 +16,6 @@
 
 자바스크립트 언어 관련
 
-#### [Framwork](~/Javascript/Framwork)
+#### [Framwork](/Javascript/Framwork)
 
 자바스크립트 프레임워크 관련
