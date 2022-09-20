@@ -19,6 +19,7 @@ npm 이던 yarn으로 다운 받으셈
 - redux-thunk
 - redux-devtools-extension
 - Redux DevTools [크롬웹스토어링크](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
+
 <br />
 
 미묘...

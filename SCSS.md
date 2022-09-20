@@ -1,3 +1,5 @@
+# SASS/SCSS
+
 ## sass 추가 
 
 ```
@@ -5,7 +7,8 @@ yarn add sass
 npm i -g sass
 ```
 
-## 그 때 sass 위치 (공홈에서 직접 다운하면 다르긴 함)
+## 그 때 sass 위치 
+공홈에서 직접 다운하면 좀 다름
 ```
 your-project/
 ├── scss
@@ -28,10 +31,14 @@ your-project/
 
 <br />
 
-### 한글 주석 안보이면
+### 한글 주석이 안보이면
 ```javascript
 charset "UTF-8";
 ```
+
+<br />
+
+### @mixin
 
 ```javascript
 @mixin 믹스명($속성값) {
@@ -44,6 +51,9 @@ charset "UTF-8";
 ($속성값: 10px) 선언시 값 지정 가능  
 class를 지양하고 이걸 쓰라*  
   
+<br />
+
+**<함수형>**
 
 ```javascript
 @function 함수명($변수1, ... $변수n) {
@@ -104,42 +114,35 @@ css상에서 부모 표시
 @at-root(with: all)
 ```
 
-미디어 쿼리 밖으로 써짐
+### 미디어 쿼리 밖으로
+```javascript
 @at-root(without: media)
+```
 
-css calc()
+<br />
+
+`css calc()`  
 sass 함수 없이 그냥 씀
 
-선택자 내용 받기
+<br />
+
+### 선택자 내용 받기
+```javascript
 .div {
   @extend 선택자;
 }
-=> css에서 ,(콤마)로 같이 표시
+```
+*css에서 ,(콤마)로 같이 표시*
 
 
-그외는 공홈(https://sass-lang.com/documentation) 참고하기
+<br /><br />
+
+그외는 [공홈](https://sass-lang.com/documentation) 참고하기
 
 <br />
 
 ---
 
-<br /> 
-
-
-## bootstrap 추가 
-```powershell
-yarn add bootstrap
-npm i bootstrap
-```
-
-## bootstrap icon 추가
-```powershell
-npm i bootstrap-icons
-```
-
-<br />
-
----
 
 <br /> 
 

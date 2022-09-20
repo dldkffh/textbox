@@ -1,31 +1,41 @@
+# Git
+
 Git Program 설치
 Git 다운받아 설치한다.
 
 ## Git 명령어
+
 Help : git help config
-git 설정하기
 
-사용자설정 : git config —global user.name “dldkffh”
-메일설정 : git config —global user.mail “jjaimsae@gmail.com”
-config확인
-git config —list
-git config user.name
-최초 설정 확인 : git config —show-origin user.name
-End of Line
-시스템설정대로 : git config —global core.eof native
-시스템설정대로 : git config —global core.autcrlf false
-Diff 결과 Highlighting 하기 : git config -global pager.diff ‘diff-highlight | less’
-로컬저장소만들기
+## git 설정하기
 
-mkdir project
+사용자설정 : git config —global user.name “dldkffh”  
+메일설정 : git config —global user.mail “jjaimsae@gmail.com”  
+config확인  
+git config —list  
+git config user.name  
+최초 설정 확인 : git config —show-origin user.name  
+End of Line  
+시스템설정대로 : git config —global core.eof native  
+시스템설정대로 : git config —global core.autcrlf false  
+Diff 결과 Highlighting 하기 : git config -global pager.diff ‘diff-highlight | less’  
+
+
+## 로컬저장소만들기 
+```powershell
+mkdir project  
 cd project
 git init
 git add *.c
 git commit -m “My first version managing directory”
-저장소 내려받기
+```
 
+
+## 저장소 내려받기
+```powershell
 git clone id@원격저장소_URL
 git clone /로컬저장소/저장소
+```
 File 상태 확인(Tracked : Modified/Unmodified/Staged, Untracked : Unstaged)
 
 git status
@@ -41,19 +51,24 @@ git reset HEAD filename
 git checkout — filename
 Tag : 특정 commit에 대해 Tag를 지정 (Version 관리로 주로 사용)
 
-조회
+### 조회
+```powershell
 git tag
 git tag -l v1.4
 git show v1.4
-만들기
+```
+
+### 만들기
+```powershell
 LghtWeight : git tag v1.5
 Annoated : git tag -a v1.5 -m “Version Updated by MC”
 이전 commit에 tag 달기 : git tag -a 1.5 commithash
 지우기 : git tag -d v1.5
 Tag 공유하기 : git push origin v1.5
-Branch
+```
 
-조회하기
+### Branch
+```powershell
 git branch -v
 git branch —merged
 git branch —no-merged
@@ -69,8 +84,8 @@ No-merged brnach : git branch -D issue
 파일추적하기 : git add test.txt
 파일추적제외하기 : .gitignore 파일에 해당 파일명이나 filter를 적는다.
 : *.[oa] - 확장자가 .o 이거나 .s는 무시한다.
-
-Commit
+```
+### Commit
 
 파일변경완료 : git commit -m “add test.txt”
 Unstaged file를 바로 commit하기 : git commit -a -m “Version update”
@@ -124,40 +139,9 @@ git fetch
 git merge
 Pull Request 보내기 : git request-pull origin/master issue
 
+<br /><br />
 
-출처: https://midnightcow.tistory.com/135 [밤소의 잠못드는 밤 IOT 이야기]
-
-
-=====================================
-=====================================
+출처: [밤소의 잠못드는 밤 IOT 이야기](https://midnightcow.tistory.com/135)
 
 
-## npm 명령어
-npm을 사용하기 위해서는 몇가지 명령어를 알아둘 필요가 있는데, 프론트엔드 개발을 위해서 사용하는 npm 명령어는 대표적으로 아래와 같습니다.
 
-npm init : package.json 생성
-npm install : package.json 파일 및 해당 종속성에 나열된 모든 모듈을 설치
-npm install package_name@버전 : 특정 패키지의 특정 버전 설치
-npm install 주소 : 특정 저장소 내 패키지 설치. 주로 github을 이와 같이 설치합니다.
-npm install package_name -g : 옵션. 글로벌로 설치. 로컬의 다른 프로젝트도 이 패키지를 사용 가능하게 됩니다.
-npm uninstall : 패키지 삭제 명령어입니다.
-npm update : 설치한 패키지들을 업데이트해줍니다.
-npm dedupe : 중복 설치된 패키지들을 정리해주는 명령어입니다.
-
-
-=====================================
-=====================================
-
-
-## yarn 명령어
-yarn init : package.json 생성
-yarn or yarn install : package.json 파일 및 해당 종속성에 나열된 모든 모듈을 설치
-yarn add package_name@버전 : 특정 패키지의 특정 버전 설치
-yarn add 주소 : 특정 저장소 내 패키지 설치. 주로 github을 이와 같이 설치합니다.
-yarn global add package_name : 옵션. 글로벌로 설치. 로컬의 다른 프로젝트도 이 패키지를 사용 가능하게 됩니다.
-yarn remove : 패키지 삭제 명령어입니다.
-yarn upgrade : 설치한 패키지들을 업데이트해줍니다.
-npm dedupe : 중복 설치된 패키지들을 정리해주는 명령어입니다.
-
-
-출처: https://velog.io/@kysung95/%EA%B0%9C%EB%B0%9C%EC%83%81%EC%8B%9D-npm%EA%B3%BC-yarn

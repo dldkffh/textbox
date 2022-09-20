@@ -29,6 +29,6 @@ list list--second
 list__item list__item--second
 ```
 
-========================================================================
+---
 
 참고 : https://9elements.com/bem-cheat-sheet/
