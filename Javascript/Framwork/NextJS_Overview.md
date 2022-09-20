@@ -158,8 +158,6 @@ You may serve it with a static server:
 Find out more about deployment here:
 
   https://cra.link/deployment
-
-PS C:\kbidevops-github\bingo_portal\secu_ui>
 ```
 
 > 프론트엔드 안에서 실행되는 걸 hydration이라고 부른다.
