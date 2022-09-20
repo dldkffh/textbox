@@ -53,7 +53,7 @@ class를 지양하고 이걸 쓰라*
   
 <br />
 
-**<함수형>**
+### 함수형
 
 ```javascript
 @function 함수명($변수1, ... $변수n) {
@@ -121,8 +121,7 @@ css상에서 부모 표시
 
 <br />
 
-`css calc()`  
-sass 함수 없이 그냥 씀
+`css calc()` sass 함수 없이 그냥 씀
 
 <br />
 
@@ -135,14 +134,13 @@ sass 함수 없이 그냥 씀
 *css에서 ,(콤마)로 같이 표시*
 
 
-<br /><br />
-
-그외는 [공홈](https://sass-lang.com/documentation) 참고하기
-
-<br />
+<br /> 
 
 ---
 
+<br /> 
+
+그외는 [공홈](https://sass-lang.com/documentation) 참고하기
 
 <br /> 
 
