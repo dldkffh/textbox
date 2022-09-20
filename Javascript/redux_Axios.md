@@ -1,3 +1,5 @@
+*추후 `redux-toolkit`으로 업데이트 필요*
+
 # Using Redux and Axios 
 
 ### [카운터 만들기](https://velopert.com/3346) (O)
