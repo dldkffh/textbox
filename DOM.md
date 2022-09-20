@@ -1,6 +1,6 @@
-<<< DOM >>> 😑😎
+# DOM 😑😎
 
-문서 객체 모델(DOM, Document Object Model)이란?
+## 문서 객체 모델(DOM, Document Object Model)이란?
 
 웹 서비스는 브라우저 바탕으로 실행된다.
 이 브라우저와 관련된 객체들의 집합을 브라우저 객체 모델(BOM, Browser Object Model)이라고 부른다. 

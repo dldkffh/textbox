@@ -1,8 +1,12 @@
-<< sass 추가 >>
+## sass 추가 
+
+```
 yarn add sass
 npm i -g sass
+```
 
-그 때 sass 위치 (공홈에서 직접 다운하면 다르긴 함)
+## 그 때 sass 위치 (공홈에서 직접 다운하면 다르긴 함)
+```
 your-project/
 ├── scss
 │   └── custom.scss
@@ -10,52 +14,78 @@ your-project/
     └── bootstrap
         ├── js
         └── scss
+```
 
-base.scss 나 main.scss 안에
-다음 그냥 .scss 생성하고 
-그 파일을 원하는 .js 파일에 @import 해서 넣어 쓰면됨
+`base.scss` 나 `main.scss` 안에  
+다음 그냥 `.scss` 생성하고   
+그 파일을 원하는 `.js` 파일에 `@import` 해서 넣어 쓰면됨  
 
-.scss파일에 다른 .scss파일 가져 올때도
-@import "파일명";
+`.scss`파일에 다른 `.scss`파일 가져 올때도  
 
-한글 주석 보기 위해서
-@charset "UTF-8";
-넣기
+```javascript
+@import "파일명";  
+```
 
+<br />
+
+### 한글 주석 안보이면
+```javascript
+charset "UTF-8";
+```
+
+```javascript
 @mixin 믹스명($속성값) {
   width : 100px;
   /* ... */
   background : $속성값;
 }
--> 속성 없이 그냥 여러군데 쓰는 용도도 가능
--> ($속성값: 10px) 선언시 값 지정 가능
--> class를 지양하고 이걸 쓰라
+```
+*속성 없이 그냥 여러군데 쓰는 용도도 가능  
+($속성값: 10px) 선언시 값 지정 가능  
+class를 지양하고 이걸 쓰라*  
+  
 
-
+```javascript
 @function 함수명($변수1, ... $변수n) {
   /* ... */
   return 반환값;
 }
+```
 
-주석 종류
+<br />
+
+### 주석 종류
+```javascript
 /* 내용 */
 // 내용
+```
 
-변수 선언
+<br />
+
+### 변수 선언
+```javascript
 $변수 : 값;
+```
 
-!default
+`!default`   
 변수 정의 안된경우 or null 값일 경우만 할당
 
-!global
+`!global`  
 지역 변수 -> 전역변수
 
-전역변수(global variable)
+<br />
+
+### 전역변수(global variable)
+```javascript
 :global {
   /* ... */
 }
+```
 
-부모요소 영향 없이 자식만 필요한 경우
+<br />
+
+### 부모요소 영향 없이 자식만 필요한 경우
+```javascript
 @at-root .div {
   /* ... */
 }
@@ -63,10 +93,16 @@ $변수 : 값;
 @at-root {
   /* ... */
 }
+```
 
-미디어 쿼리 이용시 
+<br />
+
+### 미디어 쿼리 이용시 
 css상에서 부모 표시
+
+```javascript
 @at-root(with: all)
+```
 
 미디어 쿼리 밖으로 써짐
 @at-root(without: media)
@@ -83,22 +119,34 @@ sass 함수 없이 그냥 씀
 
 그외는 공홈(https://sass-lang.com/documentation) 참고하기
 
-========================================================================
+<br />
 
-<< bootstrap 추가 >>
+---
+
+<br /> 
+
+
+## bootstrap 추가 
+```powershell
 yarn add bootstrap
 npm i bootstrap
+```
 
-
-<< bootstrap icon >>
+## bootstrap icon 추가
+```powershell
 npm i bootstrap-icons
+```
 
-아이콘 참고
+<br />
+
+---
+
+<br /> 
+
+아이콘 참고  
 https://icons.getbootstrap.com/
 
-========================================================================
-
-참고 자료 
+참고 자료   
 https://grace-go.tistory.com/57
 https://designmeme.github.io/ko/blog/sass-variables-and-default-flag/
 https://happycording.tistory.com/entry/Sass-mixin-%EA%B3%BC-include-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0
