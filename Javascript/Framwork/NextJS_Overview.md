@@ -165,15 +165,32 @@ export default function Home() {
 }
 ```
 
-## **Image Optimization**
-이거 대신 임베디드로 sass로 적용하는게 나을듯
-
-
-<br/>
+<br/><br/>
 
 [**Fullstack Example with Next.js (REST API)**](https://github.com/prisma/prisma-examples/tree/latest/javascript/rest-nextjs)  
 [prisma - quickstart](https://www.prisma.io/docs/getting-started/quickstart)  
 [Next.js + MySQL](https://github.com/vercel/next.js/tree/canary/examples/with-mysql)  
+
+## **API**
+
+개인적으로 생각한건  
+`mysql` + `prisma` + `nextjs-rest-api-routes`  
+
+[RBAC와 ABAC 의 특징 비교: 정의 및 사용 사례](https://www.okta.com/kr/identity-101/role-based-access-control-vs-attribute-based-access-control/)
+
+### **RBAC vs. ABAC**
+
+- RBAC(Role-Based Access Control)란?
+  RBAC 프로토콜에서는 이 사람의 역할에 따라 결정
+  균일적, 게층적, 제한적, 대칭적
+
+- ABAC(Attribute-Based Access Control)란? 
+  사용자, 리소스속성, 환경에 따라 결정
+
+규모가 작을 수록 규칙을 적을 수록 RBAC가 편하다
+
+<br/>
+
 ## Prisma
 NextJS를 설치하면 prisma를 쓸수 있다.
 
@@ -205,28 +222,7 @@ npx prisma db pull
 
 <br/>
 
-## **API**
-
-개인적으로 생각한건  
-`mysql` + `prisma` + `nextjs-rest-api-routes`  
-
-
 <br/>
-
-[RBAC와 ABAC 의 특징 비교: 정의 및 사용 사례](https://www.okta.com/kr/identity-101/role-based-access-control-vs-attribute-based-access-control/)
-
-### **RBAC vs. ABAC**
-
-- RBAC(Role-Based Access Control)란?
-  RBAC 프로토콜에서는 이 사람의 역할에 따라 결정
-  균일적, 게층적, 제한적, 대칭적
-
-- ABAC(Attribute-Based Access Control)란? 
-  사용자, 리소스속성, 환경에 따라 결정
-
-규모가 작을 수록 규칙을 적을 수록 RBAC가 편하다
-
-<br/><br/>
 
 
 [NextAuth.js Example App](https://github.com/nextauthjs/next-auth-example)
@@ -251,9 +247,11 @@ yarn add supertokens-node
 
 <br/><br/>
 
-### 여태 배운 것을 사용하여 회원가입/회원관리 구현하기
-### CKeditor를 사용해 기본 게시판을 만들어 보자
-useStete
+### Quest
+
+- 여태 배운 것을 사용하여 회원가입/회원관리 구현하기
+
+- CKeditor를 사용해 기본 게시판을 만들어 보자
 
 
 <br/><br/>  
