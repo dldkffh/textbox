@@ -1,5 +1,7 @@
 # **Next.js**
 
+추천하는 강의 : [노마드 코더 - NextJS 시작하기](https://nomadcoders.co/nextjs-fundamentals)
+
 <br/>
 
 ## **리액트 프레임 워크 종류**
@@ -44,6 +46,16 @@ yarn add next react react-dom
 
 <br/>
 
+## **네임드 파일 이름**
+```js
+_document.js  //<head> 태그 안에 작성될 CDN이나 공통으로 추가될 meta태그를 작성
+_app.js  //공통되는 레이아웃을 작성
+_error.js  //에러 페이지에서 공통으로 사용
+next.config.js  //웹팩 플러그인과 Nextjs 라우팅 설정을 작성, 리다이렉트 설정 가능
+```
+
+<br/>
+
 ## **Route**
 
 *라우터는 가히 혁명적인 수준이다.*
@@ -63,22 +75,56 @@ yarn add next react react-dom
 /pages/api/index.js -> http://a.com/api  
 /pages/api/[id].js -> http://a.com/api/:id  
 
-<br/>
 
-## **네임드 파일 이름**
-```js
-_document.js  //<head> 태그 안에 작성될 CDN이나 공통으로 추가될 meta태그를 작성
-_app.js  //공통되는 레이아웃을 작성
-_error.js  //에러 페이지에서 공통으로 사용
-next.config.js  //웹팩 플러그인과 Nextjs 라우팅 설정을 작성, 리다이렉트 설정 가능
-```
+## **API**
+
+개인적으로 생각한건  
+`mysql` + `prisma` + `nextjs-rest-api-routes`  
+
 
 <br/>
 
-### <환경변수>
-`.env`  
+[RBAC와 ABAC 의 특징 비교: 정의 및 사용 사례](https://www.okta.com/kr/identity-101/role-based-access-control-vs-attribute-based-access-control/)
+### **RBAC vs. ABAC**
+
+- RBAC(Role-Based Access Control)란?
+RBAC 프로토콜에서는 이 사람의 역할에 따라 결정
+균일적, 게층적, 제한적, 대칭적
+
+- ABAC(Attribute-Based Access Control)란? 
+사용자, 리소스속성, 환경에 따라 결정
+
+규모가 작을 수록 규칙을 적을 수록 RBAC가 편하다
+
+
+<br/>
+
+## **환경변수**
+`/.env`  
 API_URL  
 NEXT_PUBLIC_API_URL : 외부에 노출되는 API  
+
+환경변수로 선언을 해놓으면
+```
+DB_HOST=localhost
+DB_USER=myuser
+DB_PASS=mypassword
+```
+
+```javascript
+// pages/index.js
+export async function getStaticProps() {
+  const db = await myDB.connect({
+    host: process.env.DB_HOST,
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
+  })
+  // ...
+}
+```
+`process.env.[환경변수]` 형태로 불러오는게 가능
+
+<br/>
 
 
 ## **getServerSideProps()**
@@ -113,23 +159,111 @@ export async function getServerSideProps() { //백엔드 처리 부분, 유저�
 }
 ```
 
-
 <br/><br/>  
 
-[Introduction | Learn Next.js (nextjs.org)](https://nextjs.org/docs/getting-started)  
+## **Style**
+이전처럼 `sass` + `styled-components` + `styled-jsx` 이 스택으로 쓸거임   
+기존에 사용하던 sass, styled-components, styled-jsx를 모두 기본적으로 제공(?) 하는 것 같다. 테스트를 해봐야겠지만 아마 다른 인스톨 없이 기본적으로 제공하는 것으로 보임.
 
-### FOUNDATION
-## **About Next.js**
-React framework.
 
+## **Image Optimization**
+```javascript
+import Image from 'next/image'
+
+export default function Home() {
+  return (
+    <>
+      <h1>My Homepage</h1>
+      <Image
+        src="/me.png" //public에 두면 알아서 가져옴
+        alt="Picture of the author"
+        width={500}
+        height={500}
+      />
+      <p>Welcome to my homepage!</p>
+    </>
+  )
+}
+```
+
+## **Image Optimization**
+이거 대신 임베디드로 sass로 적용하는게 나을듯
 
 
 <br/>
 
-## **Style**
-기존에 사용하던 sass, styled-components, styled-jsx를 모두 기본적으로 제공(?) 하는 것 같다. 테스트를 해봐야겠지만 아마 다른 인스톨 없이 기본적으로 제공하는 것으로 보임.
+[**Fullstack Example with Next.js (REST API)**](https://github.com/prisma/prisma-examples/tree/latest/javascript/rest-nextjs)  
+[prisma - quickstart](https://www.prisma.io/docs/getting-started/quickstart)  
+[Next.js + MySQL](https://github.com/vercel/next.js/tree/canary/examples/with-mysql)  
+## Prisma
+NextJS를 설치하면 prisma를 쓸수 있다.
+
+```powershelld
+yarn add @prisma/client
+npx prisma generate
+```
+하지만 client는 따로 다운 받아야 한다.  
+(꼭 generate할 필요가 있는지는 모름)
+
+<br/>
+
+`.env`에 `DATABASE_URL`를 추가하고
+```ini
+DATABASE_URL=mysql://<USERNAME>:<PLAIN_TEXT_PASSWORD>@<ACCESS_HOST_URL>/<DATABASE_NAME>
+```
+
+```powershell
+npx prisma init
+```
+위 명령어를 입력하자.
+
+프로젝트에 `/prisma/`폴더와 그안에 `schema.prisma`파일이 생길 것이다.
+
+```powershell
+npx prisma db pull
+```
+해당 명령어로 이미 생성된 db와 연결 가능!
+
+<br/><br/>
 
 
+[NextAuth.js Example App](https://github.com/nextauthjs/next-auth-example)
+## [NextAuth.js](https://next-auth.js.org/)
+```powershell
+yarn add next-auth @prisma/client @next-auth/prisma-adapter
+yarn add prisma --dev
+```
+
+[NextAuth Email](https://next-auth.js.org/providers/email)
+
+
+<br/>
+
+[SuperTokens Example](https://github.com/vercel/next.js/tree/canary/examples/with-supertokens)
+## [SuperTokens](https://supertokens.com/docs/guides)
+
+```powershell
+yarn add supertokens-auth-react
+yarn add supertokens-node
+```
+
+<br/><br/>
+
+### 여태 배운 것을 사용하여 회원가입/회원관리 구현하기
+### CKeditor를 사용해 기본 게시판을 만들어 보자
+useStete
+
+
+<br/><br/>  
+
+---
+
+## 참고
+
+[Introduction | Learn Next.js (nextjs.org)](https://nextjs.org/docs/getting-started)  
+[NextJS MySQL example. Get MySQL data into a react app using Node JS](https://www.youtube.com/watch?v=aprLiG34b50)
+
+---
 
 <br/><br/>
 
@@ -158,6 +292,8 @@ You may serve it with a static server:
 Find out more about deployment here:
 
   https://cra.link/deployment
+
+PS C:\kbidevops-github\bingo_portal\secu_ui>
 ```
 
 > 프론트엔드 안에서 실행되는 걸 hydration이라고 부른다.
@@ -237,3 +373,12 @@ GraphQL은 API용으로 특별히 개발된 쿼리 언어로서, 클라이언트
 ### **멱등성**
 동일한 요청을 한 번 보내는 것과 여러 번 연속으로 보내는 것이 같은 효과를 지니고, 서버의 상태도 동일하게 남을 때, 해당 HTTP 메서드가 멱등성을 가졌다고 말합니다. 다른 말로는, **멱등성 메서드에는 통계 기록 등을 제외하면 어떠한 부수 효과(side effect)도 존재해서는 안됩니다.** 올바르게 구현한 경우 `GET`, `HEAD`, `PUT`, `DELETE` 메서드는 멱등성을 가지며, `POST` 메서드는 그렇지 않습니다.
 
+### [Nodemailer](https://www.npmjs.com/package/nodemailer)
+Send emails from Node.js – easy as cake!
+
+### [Naver cloud - Simple & Easy Notification Service](https://www.ncloud.com/product/applicationService/sens)
+알람 및 메시지 전송 기능을 쉽게 구현할 수 있는 서비스 제공  
+Simple & Easy Notification Service를 통해 서비스에 메시지 및 알람 전송 기능을 간편하게 구현할 수 있습니다. 메시지 전송 현황을 실시간으로 확인하고, 전송 이력을 특정 기간 별로 조회할 수 있어 효율적인 서비스 운영이 가능합니다.
+
+### Style 참고 할만한 사이트
+- [dribbble](https://dribbble.com/)
