@@ -76,27 +76,6 @@ next.config.js  //웹팩 플러그인과 Nextjs 라우팅 설정을 작성, 리�
 /pages/api/[id].js -> http://a.com/api/:id  
 
 
-## **API**
-
-개인적으로 생각한건  
-`mysql` + `prisma` + `nextjs-rest-api-routes`  
-
-
-<br/>
-
-[RBAC와 ABAC 의 특징 비교: 정의 및 사용 사례](https://www.okta.com/kr/identity-101/role-based-access-control-vs-attribute-based-access-control/)
-### **RBAC vs. ABAC**
-
-- RBAC(Role-Based Access Control)란?
-RBAC 프로토콜에서는 이 사람의 역할에 따라 결정
-균일적, 게층적, 제한적, 대칭적
-
-- ABAC(Attribute-Based Access Control)란? 
-사용자, 리소스속성, 환경에 따라 결정
-
-규모가 작을 수록 규칙을 적을 수록 RBAC가 편하다
-
-
 <br/>
 
 ## **환경변수**
@@ -223,6 +202,29 @@ npx prisma init
 npx prisma db pull
 ```
 해당 명령어로 이미 생성된 db와 연결 가능!
+
+<br/>
+
+## **API**
+
+개인적으로 생각한건  
+`mysql` + `prisma` + `nextjs-rest-api-routes`  
+
+
+<br/>
+
+[RBAC와 ABAC 의 특징 비교: 정의 및 사용 사례](https://www.okta.com/kr/identity-101/role-based-access-control-vs-attribute-based-access-control/)
+
+### **RBAC vs. ABAC**
+
+- RBAC(Role-Based Access Control)란?
+  RBAC 프로토콜에서는 이 사람의 역할에 따라 결정
+  균일적, 게층적, 제한적, 대칭적
+
+- ABAC(Attribute-Based Access Control)란? 
+  사용자, 리소스속성, 환경에 따라 결정
+
+규모가 작을 수록 규칙을 적을 수록 RBAC가 편하다
 
 <br/><br/>
 
