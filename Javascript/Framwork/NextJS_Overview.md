@@ -199,7 +199,7 @@ yarn add @prisma/client
 npx prisma generate
 ```
 하지만 client는 따로 다운 받아야 한다.  
-(꼭 generate할 필요가 있는지는 모름)
+generate도 해줘야 client가 제대로 돌아간다.
 
 <br/>
 
@@ -270,6 +270,8 @@ yarn add supertokens-node
 ## **궁금증 - 짤팁**
 
 > powershell에서 `code [filename or path]`를 하면 VScode가 실행된다.  
+
+<br/>
 
 ### **자바스크립트 코드 안보이게 할 수 없나? : Build방법**
 > 리액트의 경우에도 `npm run build`후 `build`파일과 `package.json`두개만 가지고 빌드하라고 나온다. 단, `/.env`안에 `GENERATE_SOURCEMAP=false`를 추가해야 소스가 개발자 도구로 봐도 안보인다!
@@ -372,6 +374,8 @@ GraphQL은 API용으로 특별히 개발된 쿼리 언어로서, 클라이언트
 ### **멱등성**
 동일한 요청을 한 번 보내는 것과 여러 번 연속으로 보내는 것이 같은 효과를 지니고, 서버의 상태도 동일하게 남을 때, 해당 HTTP 메서드가 멱등성을 가졌다고 말합니다. 다른 말로는, **멱등성 메서드에는 통계 기록 등을 제외하면 어떠한 부수 효과(side effect)도 존재해서는 안됩니다.** 올바르게 구현한 경우 `GET`, `HEAD`, `PUT`, `DELETE` 메서드는 멱등성을 가지며, `POST` 메서드는 그렇지 않습니다.
 
+<br/>
+
 ### [Nodemailer](https://www.npmjs.com/package/nodemailer)
 Send emails from Node.js – easy as cake!
 
@@ -381,3 +385,9 @@ Simple & Easy Notification Service를 통해 서비스에 메시지 및 알람 �
 
 ### Style 참고 할만한 사이트
 - [dribbble](https://dribbble.com/)
+
+- [CoreUI Free Template](https://github.com/coreui/coreui-free-bootstrap-admin-template#installation)
+```powershell
+npm install @coreui/react
+npm install @coreui/coreui
+```
