@@ -48,10 +48,10 @@ yarn add next react react-dom
 
 ## **네임드 파일 이름**
 ```js
-_document.js  //<head> 태그 안에 작성될 CDN이나 공통으로 추가될 meta태그를 작성
-_app.js  //공통되는 레이아웃을 작성
-_error.js  //에러 페이지에서 공통으로 사용
-next.config.js  //웹팩 플러그인과 Nextjs 라우팅 설정을 작성, 리다이렉트 설정 가능
+/pages/_document.js  //<head> 태그 안에 작성될 CDN이나 공통으로 추가될 meta태그를 작성
+/pages/_app.js  //공통되는 레이아웃을 작성
+/pages/_error.js  //에러 페이지에서 공통으로 사용
+/next.config.js  //웹팩 플러그인과 Nextjs 라우팅 설정을 작성, 리다이렉트 설정 가능
 ```
 
 <br/>
@@ -384,10 +384,17 @@ Send emails from Node.js – easy as cake!
 Simple & Easy Notification Service를 통해 서비스에 메시지 및 알람 전송 기능을 간편하게 구현할 수 있습니다. 메시지 전송 현황을 실시간으로 확인하고, 전송 이력을 특정 기간 별로 조회할 수 있어 효율적인 서비스 운영이 가능합니다.
 
 ### Style 참고 할만한 사이트
-- [dribbble](https://dribbble.com/)
+- [dribbble](https://dribbble.com/)  
 
-- [CoreUI Free Template](https://github.com/coreui/coreui-free-bootstrap-admin-template#installation)
+- [CoreUI Free Template](https://github.com/coreui/coreui-free-bootstrap-admin-template#installation)  
+- [**coreui-free-react-admin-template**](https://github.com/coreui/coreui-free-react-admin-template)  
+- [Redux Toolkit TypeScript Example](https://github.com/vercel/next.js/tree/canary/examples/with-redux) : CoreUI 사용시 필요  
 ```powershell
 npm install @coreui/react
 npm install @coreui/coreui
-```
+```  
+  
+### **async function**
+자바스크립트 비동기 함수
+비동기 함수는 `async`키워드로 선언된 함수이며 그 `await`안에 키워드가 허용됩니다.  
+`await`사용하면 약속 체인을 명시적으로 구성할 필요 없이 비동기식 약속 기반 동작을 보다 깔끔한 스타일로 작성할 수 있습니다.  
