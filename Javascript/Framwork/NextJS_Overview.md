@@ -232,7 +232,13 @@ yarn add next-auth @prisma/client @next-auth/prisma-adapter
 yarn add prisma --dev
 ```
 
-[NextAuth Email](https://next-auth.js.org/providers/email)
+[NextAuth Email](https://next-auth.js.org/providers/email) - 이건 이메일 인증이라 아님
+  
+[NextAuth Credentials](https://next-auth.js.org/configuration/providers/credentials)  
+[NextAuth Callbacks](https://next-auth.js.org/configuration/callbacks)  
+[NextAuth Models](https://next-auth.js.org/adapters/models)  
+  
+[next-auth/jwt](https://next-auth.js.org/getting-started/upgrade-v4#next-authjwt)  
 
 
 <br/>
