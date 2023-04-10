@@ -1,5 +1,5 @@
 ---
-title: NextJS_Overview
+title: NextJS Overview
 authors: dldkffh
 tags: [javascript, NextJS]
 enableComments: false # for Gisqus
